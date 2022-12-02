@@ -14,7 +14,7 @@ public class Bludisko {
         obdlznik2 = new Obdlznik(700, 20, 00, 0, "red", false);
         obdlznik3 = new Obdlznik(20, 700, 700, 0, "red", false);
         obdlznik4 = new Obdlznik(720, 20, 0, 700, "red", false);
-        //obdlznikRodisko1 = new Obdlznik(100, 5, )
+        obdlznikRodisko1 = new Obdlznik(300, 20, 200, 150, "blue", false);
     }
     
     public void nakresliBludisko(){
@@ -22,5 +22,6 @@ public class Bludisko {
         this.obdlznik2.zobraz();
         this.obdlznik3.zobraz();
         this.obdlznik4.zobraz();
+        this.obdlznikRodisko1.zobraz();
     }
 }
