@@ -17,7 +17,7 @@ public class Stvorec {
     /**
      * Vytvor nový štvorec preddefinovanej farby na preddefinovanej pozícii.
      */
-    public Stvorec() {
+    public Stvorec(int strana, int lavyHornyX, int lavyHornyY, String farba, boolean jeViditelny) {
         this.strana = 30;
         this.lavyHornyX = 60;
         this.lavyHornyY = 50;
