@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Hra
+comment1.params=
+comment1.target=Hra()
+comment2.params=
+comment2.target=void\ tik()
+comment3.params=
+comment3.target=Poloha\ getNextPoloha()
+comment4.params=
+comment4.target=void\ posunHore()
+comment5.params=
+comment5.target=void\ posunDole()
+comment6.params=
+comment6.target=void\ posunVlavo()
+comment7.params=
+comment7.target=void\ posunVpravo()
+numComments=8

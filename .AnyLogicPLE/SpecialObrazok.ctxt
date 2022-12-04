@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SpecialObrazok
+comment1.params=poloha\ subor
+comment1.target=SpecialObrazok(Poloha,\ java.lang.String)
+comment2.params=
+comment2.target=Poloha\ getPoloha()
+comment3.params=novaPoloha
+comment3.target=void\ zmenPolohu(Poloha)
+numComments=4
