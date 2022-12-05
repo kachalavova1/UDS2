@@ -17,11 +17,11 @@ public class Kruh {
     /**
      * Vytvor nový kruh preddefinovanej farby na preddefinovanej pozícii. 
      */
-    public Kruh() {
-        this.priemer = 30;
-        this.lavyHornyX = 20;
-        this.lavyHornyY = 60;
-        this.farba = "blue";
+    public Kruh(int priemer, int lavyHornyX,int lavyHornyY,String farba,boolean jeViditelny   ) {
+        this.priemer = priemer;
+        this.lavyHornyX = lavyHornyX;
+        this.lavyHornyY = lavyHornyY;
+        this.farba = farba;
         this.jeViditelny = false;
     }
 

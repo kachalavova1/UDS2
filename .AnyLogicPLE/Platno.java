@@ -40,8 +40,8 @@ public class Platno {
      */
     public static Platno dajPlatno() {
         if (Platno.platnoSingleton == null) {
-            Platno.platnoSingleton = new Platno("BlueJ Shapes Demo", 1000, 1000, 
-                                         Color.white);
+            Platno.platnoSingleton = new Platno("BlueJ Shapes Demo", 720, 720, 
+                                         Color.black);
         }
         Platno.platnoSingleton.setVisible(true);
         return Platno.platnoSingleton;
