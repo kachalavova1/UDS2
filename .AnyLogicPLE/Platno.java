@@ -210,8 +210,7 @@ public class Platno {
     public void addTimerListener(ActionListener listener) {
         this.timer.addActionListener(listener);
     }
-
-
+    
     /************************************************************************
      * Inner class CanvasPane - the actual canvas component contained in the
      * Canvas frame. This is essentially a JPanel with added capability to

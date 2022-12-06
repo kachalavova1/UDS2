@@ -172,4 +172,23 @@ public class Kruh {
             canvas.erase(this);
         }
     }
+    
+    /* 
+       vrati lavyHornyX
+       */
+    public int getLavyHornyX() {
+        return this.lavyHornyX;
+    }
+    /* 
+       vrati lavyHornyY
+       */
+    public int getLavyHornyY() {
+        return this.lavyHornyY;
+    }
+    /* 
+       vrati priemer
+       */
+    public int getPriemer() {
+        return this.priemer;
+    }
 }

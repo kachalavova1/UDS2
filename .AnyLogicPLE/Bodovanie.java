@@ -1,37 +1,27 @@
+import javax.swing.JOptionPane;
 
-/**
- * Trieda {@code Bodovanie} slúži na «doplòte opis»…
- *
- * @author   «meno autora»
- * @version  «verzia alebo dátum»
- */
 public class Bodovanie
 {
-    // Nahraïte nižšie uvedený príklad vlastnými premennými…
-
-    // inštanèné premenné…
-    private int x;
-
-
-    /**
-     * Konštruktory objektov triedy Bodovanie.
-     */
+  
+    private int skore;
+    
     public Bodovanie()
     {
-        // Inicializujte inštanèné premenné.
-        x = 0;
+        skore = 0;
     }
 
-
-    /**
-     * Prázdna metóda – «tento komentár nahraïte vlastným opisom»…
-     *
-     * @param   y  opis významu parametra
-     * @return     opis významu návratovej hodnoty – napr.: súèet x a y
-     */
-    public int príkladMetódy(int y)
+    public int getSkore()
     {
-        // Sem vložte príkazy tela metódy.
-        return x + y;
+        return this.skore;
     }
+    public void setSkore(int newSkore){
+        this.skore = newSkore;
+    }
+    public void pridajKuSkore(int Body){
+       setSkore(getSkore()+ Body); // zvyšim aktualne skore o body
+    }
+    public void vypisSkore(){ // vypíše skore na Displeji ako správu
+       JOptionPane.showMessageDialog(null, "Poèet získaných bodov: " + this.skore, "Konecne Skore" ,JOptionPane.INFORMATION_MESSAGE);
+    }
+    
 }

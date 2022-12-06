@@ -20,4 +20,5 @@ public class PacMan {
         Poloha staraPoloha = this.poloha;
         this.setPoloha(novaPoloha);
     }
+    
 }
