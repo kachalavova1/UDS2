@@ -1,3 +1,4 @@
+import java.util.Random;
 public enum Smer {
     HORE(90,0,-1),
     DOLE(270,0,1),
@@ -24,5 +25,10 @@ public enum Smer {
     
     public int getUhol(){
         return this.uhol;
+    }
+    
+    public static Smer getRandom(){
+        Random r = new Random();
+        return Smer.values()[r.nextInt(Smer.values().length)];
     }
 }
