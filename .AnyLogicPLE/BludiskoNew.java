@@ -37,40 +37,44 @@ public class BludiskoNew {
 
     // spodny stlpik (maly) v tvare I prava
     private Obdlznik obdlznikPStlpik1;
+
+    private ArrayList<Obdlznik> obdlznik;
     //// TOTO VSETKO SA TYKALO BLUDISKA 
 
     private ArrayList<Kruh> body; // Create an ArrayList object
     private ArrayList<Kruh> bonusoveBody;
 
     public BludiskoNew() {
-        obdlznik1 = new Obdlznik(20, 700, 0, 0, "blue", false);
-        obdlznik2 = new Obdlznik(700, 20, 00, 0, "blue", false);
-        obdlznik3 = new Obdlznik(20, 700, 700, 0, "blue", false);
-        obdlznik4 = new Obdlznik(720, 20, 0, 700, "blue", false);
+        this.obdlznik = new ArrayList<Obdlznik>();
+        this.obdlznik.add(new Obdlznik(20, 700, 0, 0, "blue", false));
+        this.obdlznik.add(new Obdlznik(20, 700, 0, 0, "blue", false));
+        this.obdlznik.add(new Obdlznik(700, 20, 00, 0, "blue", false));
+        this.obdlznik.add(new Obdlznik(20, 700, 700, 0, "blue", false));
+        this.obdlznik.add(new Obdlznik(720, 20, 0, 700, "blue", false));
 
-        obdlznikRodisko1 = new Obdlznik(300, 30, 210, 150, "blue", false);
-        obdlznikRodisko2 = new Obdlznik (30, 50,210 , 100, "blue", false);
-        obdlznikRodisko3 = new Obdlznik (30, 50,480,100, "blue", false);
+        this.obdlznik.add(new Obdlznik(300, 30, 210, 150, "blue", false));
+        this.obdlznik.add(new Obdlznik (30, 50,210 , 100, "blue", false));
+        this.obdlznik.add(new Obdlznik (30, 50,480,100, "blue", false));
 
-        obdlznikLavoRodisko1 = new Obdlznik (30,300,100,100, "blue", false);
-        obdlznikLavoRodisko2 = new Obdlznik (190,30,120,260, "blue", false);
+        this.obdlznik.add(new Obdlznik (30,300,100,100, "blue", false));
+        this.obdlznik.add(new Obdlznik (190,30,120,260, "blue", false));
 
-        obdlznikPravoRodisko1 = new Obdlznik (30, 300, 590,100, "blue", false);
-        obdlznikPravoRodisko2 = new Obdlznik (190,30,410,260, "blue", false);
+        this.obdlznik.add(new Obdlznik (30, 300, 590,100, "blue", false));
+        this.obdlznik.add(new Obdlznik (190,30,410,260, "blue", false));
 
-        obdlznikT1 = new Obdlznik(30,190,345,370, "blue", false);
-        obdlznikT2 = new Obdlznik (300,30, 210,370, "black", false);
+        this.obdlznik.add(new Obdlznik(30,190,345,370, "blue", false));
+        //this.obdlznik.add(new Obdlznik (300,30, 210,370, "black", false));
 
-        obdlznikPravoL1 = new Obdlznik (30,140,235,480, "blue", false );
-        obdlznikPravoL2 = new Obdlznik (165,30,100,480, "blue", false );
-        obdlznikPravoL3 = new Obdlznik (30,30,205,590, "blue", false );
+        this.obdlznik.add(new Obdlznik (30,140,235,480, "blue", false ));
+        this.obdlznik.add(new Obdlznik (165,30,100,480, "blue", false ));
+        this.obdlznik.add(new Obdlznik (30,30,205,590, "blue", false ));
 
-        obdlznikLavoL1 = new Obdlznik (30,140,450,480, "blue", false );
-        obdlznikLavoL2 = new Obdlznik (170,30,450,480, "blue", false );
-        obdlznikLavoL3 = new Obdlznik (30,30,480,590, "blue", false );
+        this.obdlznik.add(new Obdlznik (30,140,450,480, "blue", false ));
+        this.obdlznik.add(new Obdlznik (170,30,450,480, "blue", false ));
+        this.obdlznik.add(new Obdlznik (30,30,480,590, "blue", false ));
 
-        obdlznikLStlpik1 = new Obdlznik (30,50,100 ,570, "blue", false );
-        obdlznikPStlpik1 = new Obdlznik (30,50,590 ,570, "blue", false );
+        this.obdlznik.add(new Obdlznik (30,50,100 ,570, "blue", false ));
+        this.obdlznik.add(new Obdlznik (30,50,590 ,570, "blue", false ));
         ///// TOTO VSETKO SA TYKALO BLUDISKA /////
 
         this.body = new ArrayList<Kruh>();
@@ -187,8 +191,6 @@ public class BludiskoNew {
         this.body.add(new Kruh (10,210,380, "yellow", false));
         this.body.add(new Kruh (10,250,380, "yellow", false));
         this.body.add(new Kruh (10,290,380, "yellow", false));
-        this.body.add(new Kruh (10,330,380, "yellow", false));
-        this.body.add(new Kruh (10,370,380, "yellow", false));
         this.body.add(new Kruh (10,410,380, "yellow", false));
         this.body.add(new Kruh (10,450,380, "yellow", false));
         this.body.add(new Kruh (10,490,380, "yellow", false));
@@ -235,7 +237,7 @@ public class BludiskoNew {
     }
 
     public void nakresliBludisko(){
-        this.obdlznik1.zobraz();
+        /*this.obdlznik1.zobraz();
         this.obdlznik2.zobraz();
         this.obdlznik3.zobraz();
         this.obdlznik4.zobraz();
@@ -263,10 +265,14 @@ public class BludiskoNew {
         this.obdlznikLavoL3.zobraz();
 
         this.obdlznikLStlpik1.zobraz();
-        this.obdlznikPStlpik1.zobraz();
+        this.obdlznikPStlpik1.zobraz();*/
 
         /* cyklus s pevnym poctom opakovani sa vykona tolkokrat ake je velke pole 
         tym padom prejde vsetky body a zobrazí ich */
+        for(int i = 0; i < this.obdlznik.size(); i++){
+            this.obdlznik.get(i).zobraz();
+        }
+
         for(int i = 0; i < this.body.size(); i++) {
             this.body.get(i).zobraz();
         }
@@ -296,12 +302,13 @@ public class BludiskoNew {
     public int getPocetBodov() {
         return this.body.size() + this.bonusoveBody.size();
     }
+
     public ArrayList<Kruh> getBody() {
         return this.body;
     }
 
     public ArrayList<Integer> zistiKoliziuSBodom(Poloha polohaPacmana) {
-        int velkostPacmana = 30;
+        int velkostPacmana = 40;
         Kruh bod = null;
         ArrayList<Integer> vysledok = new ArrayList<Integer>();
         for(int i = 0; i < this.body.size(); i++) {
@@ -349,5 +356,20 @@ public class BludiskoNew {
         vysledok.add(-1);
         return vysledok;
 
+    }
+
+
+    public boolean vyberSuradnice(int x, int y) {
+        Obdlznik najdeny = null;
+        for(int i = 0; i < this.obdlznik.size(); i++){
+        if (this.obdlznik.get(i).obsahujeBod(x, y)) {
+            najdeny = this.obdlznik.get(i);
+            break;
+        }
+    }
+        if (najdeny != null) { 
+            return true;
+        }
+        return false;
     }
 }

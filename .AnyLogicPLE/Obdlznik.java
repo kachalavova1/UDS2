@@ -13,7 +13,7 @@ public class Obdlznik {
     private int lavyHornyX;
     private int lavyHornyY;
     private String farba;
-    
+
     private boolean jeViditelny;
 
     /**
@@ -35,7 +35,7 @@ public class Obdlznik {
         this.jeViditelny = true;
         this.nakresli();
     }
-    
+
     /**
      * (Obdåžnik) Skry sa.
      */
@@ -43,7 +43,7 @@ public class Obdlznik {
         this.zmaz();
         this.jeViditelny = false;
     }
-    
+
     /**
      * (Obdåžnik) Posuò sa vpravo o pevnú dåžku.
      */
@@ -164,7 +164,7 @@ public class Obdlznik {
         if (this.jeViditelny) {
             Platno canvas = Platno.dajPlatno();
             canvas.draw(this, this.farba,
-                        new Rectangle(this.lavyHornyX, this.lavyHornyY, this.stranaA, this.stranaB));
+                new Rectangle(this.lavyHornyX, this.lavyHornyY, this.stranaA, this.stranaB));
             canvas.wait(10);
         }
     }
@@ -177,5 +177,31 @@ public class Obdlznik {
             Platno canvas = Platno.dajPlatno();
             canvas.erase(this);
         }
+    }
+
+    public int getLavyHornyX(){
+        return this.lavyHornyX;
+    }
+
+    public int getLavyHornyY(){
+        return this.lavyHornyY;
+    }
+
+    public int getStranaA(){
+        return this.stranaA;
+    }
+
+    public int getStranaB(){
+        return this.stranaB;
+    }
+
+    public boolean obsahujeBod(int x, int y) {
+        if (x < this.lavyHornyX || x > this.lavyHornyX + this.stranaA)
+            return false;
+
+        if (y < this.lavyHornyY || y > this.lavyHornyY + this.stranaB)
+            return false;      
+
+        return true;    
     }
 }

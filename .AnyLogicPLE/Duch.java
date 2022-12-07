@@ -1,8 +1,8 @@
-public class PacMan {
+public class Duch {
     private Poloha poloha;
     private final SpecialObrazok obrazok;
 
-    public PacMan(Poloha poloha, PacManFot typ) {
+    public Duch(Poloha poloha, DuchFot typ) {
         this.poloha = poloha;
         this.obrazok = new SpecialObrazok(this.poloha, typ.getSuborObrazka());
     }
